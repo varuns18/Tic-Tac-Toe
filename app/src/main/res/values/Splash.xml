@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primaryContainer</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_for_splash</item>
+        <item name="windowSplashScreenAnimationDuration">200</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.TicTacToe</item>
+    </style>
+</resources>

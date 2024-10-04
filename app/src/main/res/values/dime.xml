@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_size_in_3">100dp</dimen>
+    <dimen name="btn_size_in_6">0dp</dimen>
+    <dimen name="btn_size_in_9">43dp</dimen>
+    <dimen name="marg_left">6dp</dimen>
+    <dimen name="marg_left_6">3dp</dimen>
+    <dimen name="marg_left_9">1dp</dimen>
+    <dimen name="btn_corner">10dp</dimen>
+    <dimen name="img_size">18dp</dimen>
+    <dimen name="img_size_6">9dp</dimen>
+    <dimen name="img_size_9">6dp</dimen>
+</resources>

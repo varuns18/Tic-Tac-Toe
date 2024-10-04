@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/back_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WithBotSix">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:backgroundTint="@null"
+        android:background="@color/secondaryContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ptsans_bold"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+            android:textColor="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/exit"
+            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/Setting"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/pause"
+            app:iconSize="24dp"
+            app:iconTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/game_rules"
+            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/game_rules"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/game_rules"
+            app:iconSize="24dp"
+            app:iconTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@+id/your_turn">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/o_scr"
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/x_scr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/o"
+                    android:padding="1dp"
+                    android:src="@drawable/o"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/you"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="You:"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/you_sco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:text="0"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/x_scr"
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/o_scr"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/x"
+                    android:padding="1dp"
+                    android:src="@drawable/x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Bot:"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+                <TextView
+                    android:id="@+id/Friend_sco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:text="0"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/your_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ptsans_bold"
+        android:text="@string/your_turn"
+        android:textColor="@color/primary_highContrast"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.46"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+        android:columnCount="6"
+        android:rowCount="6"
+        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_turn">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card1"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card3"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card4"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card5"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card6"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            android:textSize="50sp"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card7"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card8"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card9"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card10"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card11"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card12"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card13"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card14"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card15"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card16"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card17"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card18"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card19"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card20"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card21"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card22"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card23"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card24"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card25"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card26"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card27"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card28"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card29"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img29"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card30"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card31"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card32"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img32"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card33"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img33"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card34"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img34"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card35"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img35"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card36"
+            style="@style/tic.tac.toe.6x6.button"
+            android:layout_margin="@dimen/marg_left_6"
+            app:cornerRadius="@dimen/btn_corner">
+
+            <ImageView
+                android:id="@+id/img36"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/img_size_6"
+                android:contentDescription="@string/your_input"
+                android:onClick="click_img" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </GridLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomAppBar"
+        android:background="@drawable/bottom_appbar_backgroung"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/previous_move"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:backgroundTint="@color/tertiaryContainer"
+            android:contentDescription="@string/Setting"
+            android:onClick="previousMove"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/previous_icon"
+            app:iconSize="24dp"
+            app:iconTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/forward_move"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:backgroundTint="@color/tertiaryContainer"
+            android:contentDescription="@string/Setting"
+            android:onClick="forwardMove"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/forward_icon"
+            app:iconSize="24dp"
+            app:iconTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/previous_move"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/extended_fab"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        app:cornerRadius="@dimen/btn_corner"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="12dp"
+        app:backgroundTint="@color/primary"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/ptsans_bold"
+        android:text="@string/new_game"
+        android:textColor="@color/primaryContainer"
+        app:icon="@drawable/add_icon"
+        app:iconTint="@color/secondaryContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
