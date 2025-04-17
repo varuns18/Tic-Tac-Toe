@@ -18,8 +18,19 @@
 
 ## 🖼️ Screenshots
 
-![Game Board (3x3)](docs/screenshots/board3x3.png)
-![Settings & Themes](docs/screenshots/settings.png)
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <img src="screenshot/1.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+  <img src="screenshot/4.jpg" alt="GTic Tac Toe" width="200" style="margin: 10px;"/>
+  <img src="screenshot/5.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+  <img src="screenshot/7.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+  <img src="screenshot/8.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+   <img src="screenshot/D1.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+   <img src="screenshot/D2.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+   <img src="screenshot/D3.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+   <img src="screenshot/D4.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+   <img src="screenshot/D5.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+   <img src="screenshot/D6.jpg" alt="Tic Tac Toe" width="200" style="margin: 10px;"/>
+</div>
 
 ---
 
