@@ -778,7 +778,7 @@ public class WithBotSix extends AppCompatActivity {
         playerXScore.setTextColor(ContextCompat.getColor(this, isXTurn ? R.color.tertiaryContainer: R.color.primary));
 
         yourTurn.setTextColor(ContextCompat.getColor(this, isXTurn ? R.color.lower_Green_container : R.color.lower_Orange_container));
-        yourTurn.setText(isXTurn ? "Your Turn!" : "Friend's Turn!");
+        yourTurn.setText(isXTurn ? "Your Turn!" : "Bot's Turn!");
     }
 
     private MaterialCardView getCorrespondingCardView(int imageViewId) {

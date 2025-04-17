@@ -440,6 +440,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(appLink));
                 startActivity(browserIntent);
+                updateBottomSheet.dismiss();
             }
         });
         update.setOnClickListener(new View.OnClickListener() {
@@ -447,6 +448,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(appLink));
                 startActivity(browserIntent);
+                updateBottomSheet.dismiss();
             }
         });
     }
