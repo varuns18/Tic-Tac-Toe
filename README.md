@@ -1,8 +1,10 @@
 # Tic Tac Toe: Classic & Offline
 
-[![Google Play Badge](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.ramphal.tictactoe)
-
 **Tic Tac Toe: Classic & Offline** is a versatile Android game offering both single-player (against configurable AI) and local two-player modes on classic 3×3, 6×6, and 9×9 boards. It’s fully offline and features light/dark themes for personalized play.
+
+The app is available for download on the Google Play Store:  
+
+[![Download on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.ramphal.tictactoe)
 
 ---
 
