@@ -113,14 +113,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🙏 Acknowledgments
-
-- **AndroidX**: For modern Android components.
-- **Jetpack Compose**: For declarative UI elements.
-- **Community & Contributors**: Thanks to all who have contributed to this project.
-
----
-
 ## 📬 Contact
 
 - **Author**: Varun
