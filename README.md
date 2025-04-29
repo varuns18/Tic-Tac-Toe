@@ -117,5 +117,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 - **Author**: Varun
 - **GitHub**: [@varuns18](https://github.com/varuns18)
-- **Website**: [Apple Guruhub](https://www.appleguruhub.com)
 - **Play Store**: [Tic Tac Toe: Classic & Offline](https://play.google.com/store/apps/details?id=com.ramphal.tictactoe)
